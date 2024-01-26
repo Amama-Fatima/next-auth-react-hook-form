@@ -17,6 +17,7 @@ export const authOptions: NextAuthOptions = {
             email: { label: "Email", type: "email", placeholder: "jsmith@gmail.com" },
             password: { label: "Password", type: "password" }
           },
+          //AUTHORIZE FUNCTION NOT BEING EXECUTED
         async authorize(credentials: Record<"email" | "password", string> | undefined) {
             console.log("Inside authorize function")
             if(!credentials?.email || !credentials?.password){
